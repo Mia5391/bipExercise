@@ -3,12 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>bip! Balance </title>
+    <script src="app.js" charset="utf-8"></script>
+    <script src="style.css" charset="utf-8"></script>
   </head>
   <body>
 <form>
 <input type="email" placeholder="Enter your e-mail" required>
-<input type="password" placeholder="Enter your password" required>
-<input type="submit" value="Entrar">
+<input type="password" placeholder="Enter your password" pattern=".{8,}" required title=" Your password must have a minimum of 8 characters and consist only of numbers"l>
+<input type="submit" value="Enter">
 </form>
   </body>
 </html>
