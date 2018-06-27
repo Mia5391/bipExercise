@@ -2,22 +2,24 @@ const userEmail = "mia@gmail.com"
 const userPassword = "12345678"
 
 function userLogin(email, password){
-  if (userEmail && userPassword = true) {
+   if (userEmail && userPassword = true) {
 location="page2.html"
-  }else {
-alert("Invalid username or password")
+   }else {
+     alert("Invalid username or password")
 }
 }
 
 
-function fetchBipApi () {
-    fetch('http://bip.franciscocapone.com/api/getSaldo/{id_tarjeta}')
-      .then((result) => result.json())
-      .then((data) => {
-        for (let i = 0; i < data.length; i++) {
-          let option = document.createElement("option");
-          option.text = data[i].id;
-          selectCohort.add(option);
-        }
-      });
+function getBipByNumber (num) {
+  fetch(`http://www.psep.cl/api/Bip.php?&numberBip=${num}`)
+  .then(response => response.json())
+  .then(data => {
+
+      console.log(data);
+
+   })
   }
+
+})
+}
+console.log(getBipByNumber('26947792'))
