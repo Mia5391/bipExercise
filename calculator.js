@@ -2,24 +2,23 @@ window.onload = function() {
 
   document.getElementById("calculate").onclick = function(){
     let card = document.getElementById("card-select").value;
-    let tariff = document.getElementById("tariff-select").value;
-    let balance = getBalanceNumber(getBipBalanceByNumber(card));
-    document.getElementById("balance").innerHTML = calculateJourney(balance, tariff);
+    getBipBalanceByNumber (card);
   }
 
   function getBipBalanceByNumber (num) {
-    let cardBalance = '';
     fetch(`http://www.psep.cl/api/Bip.php?&numberBip=${num}`)
       .then(response => response.json())
       .then(data => {
-        //console.log(data);
         Object.keys(data).forEach(function(key) {
           if(key === 'Saldo  tarjeta'){
-            cardBalance = data[key];
+            let cardBalance = data[key];
+            let tariff = document.getElementById("tariff-select").value;
+            let newBalance = calculateJourney(getBalanceNumber(cardBalance),tariff);
+            document.getElementById("journey-price").innerHTML = '$'+tariff;
+            document.getElementById("balance").innerHTML = '$'+newBalance;
           }
         });
     });
-    return cardBalance;
   }
 
   function getBalanceNumber(balanceText) {
