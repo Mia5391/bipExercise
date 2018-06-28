@@ -1,24 +1,50 @@
 window.onload = function() {
-  const userEmail = "mia@gmail.com";
-  const userPassword = "12345678";
+  const defaultUserEmail = "mia@gmail.com";
+  const defaultUserPassword = "12345678";
 
 
   document.getElementById("login").onclick = function (email, password){
     let userEmailInput = document.getElementById("user-email").value;
     let userPasswordInput = document.getElementById("user-password").value;
-    if (userEmail === userEmailInput && userPassword === userPasswordInput) {
-      location="page2.html"} else {
+    if (validateEmailAndPassword(userEmailInput, userPasswordInput)) {
+      location="page2.html"
+    } else {
       alert("Invalid username or password");
     }
   }
 
-  function getBipByNumber (num) {
-    fetch(`http://www.psep.cl/api/Bip.php?&numberBip=${num}`).then(response => response.json()).then(data => {
-
-        console.log(data);
-
-     })
+  function validateEmailAndPassword(email, password) {
+    if (defaultUserEmail === email && defaultUserPassword === password){
+      return true;
+    } else {
+      return false;
     }
-  console.log(getBipByNumber('26947792'));
+  }
+
+  function isValidEmailFormat(userInput) {
+    if (userInput.includes('@')){
+      if (substr(userInput.indexOf('@')).includes('.')) {
+        return true;
+      }else{
+        return false;
+      }
+    }else{
+      return false;
+    }
+  }
+
+  function isValidPasswordFormat(userInput) {
+    if (userInput.lenght <= 8 && isInteger(userInput)){
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  function isInteger(userInput){
+    let inputIsANumber = parseInt(userInput) != NaN;
+    let inputIsAnInteger = userInput % 1 === 0;
+    return inputIsANumber && inputIsAnInteger;
+  }
 
 }
