@@ -3,8 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title>Journey calculator</title>
+    <script src="calculator.js" charset="utf-8"></script>
+    <script src="style.css" charset="utf-8"></script>
   </head>
   <body>
-    
+    <select class="select" id="tariff-select">
+      <option value="">Select tariff</option>
+      <option value="760">High: $760</option>
+      <option value="680">Mid: $680</option>
+      <option value="630">Low: $630</option>
+    </select>
+    <select id="card-select">
+      <option value="">Select a card:</option>
+      <option value="22502085">22502085</option>
+      <option value="26947792">26947792</option>
+    </select>
+    <button type="button" id="calculate">Calculate</button>
+    <div class="heading"><h1>Total Balance</h1></div>
+    <div class="balance" id='balance'></div>
   </body>
 </html>
