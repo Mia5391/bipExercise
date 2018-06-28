@@ -3,17 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title>View balance</title>
-    <script src="app.js" charset="utf-8"></script>
     <script src="balance.js" charset="utf-8"></script>
     <script src="style.css" charset="utf-8"></script>
   </head>
   <body>
     <input type="text" id="card-number" placeholder="Card Number"></input>
-    <select id="cardSelect">
-      <option value="select">Saved cards:</option>
+    <select id="card-select">
+      <option value="">Saved cards:</option>
       <option value="22502085">22502085</option>
       <option value="26947792">26947792</option>
 
     </select>
+    <button type="button" id="balance-button">View Balance</button>
+    <div class="heading"><h1>Total Balance</h1></div>
+    <div class="balance" id='balance'></div>
   </body>
 </html>
