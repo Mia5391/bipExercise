@@ -9,6 +9,7 @@ Making an application that would allow a user to check their bip! balance.
 - Journey calculator (on entering or choosing their card number and choosing what schedule they want to travel in, the user will be able to calculate their remaining balance)
 
 -------------------------------------------------
+Next iteration:
 - profile (with ability to personalise their experience and add additional cards
 - FAQ
 
