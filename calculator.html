@@ -8,21 +8,29 @@
     <script src="style.css" charset="utf-8"></script>
   </head>
   <body>
+    <div class="container">
+      <div class="row">
+      <div class="one-third column">
     <select class="select" id="tariff-select">
       <option value="">Select tariff</option>
       <option value="760">High: $760</option>
       <option value="680">Mid: $680</option>
       <option value="630">Low: $630</option>
     </select>
+      </div>
+      <div class="one-third column">
     <select id="card-select">
       <option value="">Select a card:</option>
       <option value="22502085">22502085</option>
       <option value="26947792">26947792</option>
     </select>
+      </div>
+      <div class="one-third column">
     <button type="button" id="calculate">Calculate</button>
     <div class="heading"><h3>Journey price</h3></div>
     <div class="balance" id='journey-price'></div>
     <div class="heading"><h3>Total Balance</h3></div>
     <div class="balance" id='balance'></div>
+      </div>
   </body>
 </html>

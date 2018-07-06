@@ -1,0 +1,32 @@
+/* Mobile first queries */
+
+/* Larger than mobile */
+@media (min-width: 400px) {
+
+.container
+  width: 100%;
+  background-color: #f4eb42;
+
+
+
+}
+
+/* Larger than phablet */
+@media (min-width: 550px) {
+  .container
+    width: 100%;
+    background-color: #f4a641;
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+  .container
+    width: 100%;
+    background-color:#41f4e5;
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
