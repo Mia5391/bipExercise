@@ -5,8 +5,8 @@ window.onload = function() {
     getBipBalanceByNumber (card);
   }
 
-  function getBipBalanceByNumber (num) {
-    fetch(`http://www.psep.cl/api/Bip.php?&numberBip=${num}`)
+  function getBipBalanceByNumber (id) {
+    fetch(`http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${id}`)
       .then(response => response.json())
       .then(data => {
         Object.keys(data).forEach(function(key) {

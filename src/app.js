@@ -22,31 +22,4 @@ window.onload = function() {
       return false;
     }
   }
-
-  function isValidEmailFormat(userInput) {
-    if (userInput.includes('@')){
-      if (substr(userInput.indexOf('@')).includes('.')) {
-        return true;
-      }else{
-        return false;
-      }
-    }else{
-      return false;
-    }
-  }
-
-  function isValidPasswordFormat(userInput) {
-    if (userInput.lenght <= 8 && isInteger(userInput)){
-      return true;
-    } else {
-      return false;
-    }
-  }
-
-  function isInteger(userInput){
-    let inputIsANumber = parseInt(userInput) != NaN;
-    let inputIsAnInteger = userInput % 1 === 0;
-    return inputIsANumber && inputIsAnInteger;
-  }
-
-}
+};
